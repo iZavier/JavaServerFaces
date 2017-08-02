@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+  <h:head>
+      <title>Register</title>
+  </h:head>
+  <h:body>
+    <h:form>
+        <h:panelGrid id="panel" columns="2" border="1" cellpadding="10" cellspacing="1">
+            <f:facet name="header">
+                <h:outputText value="Register"/><br />
+                <h:graphicImage value="resources/images/img.jpg" width="400px" /><br />
+            </f:facet>
+            <h:outputLabel value="Forename"  />
+            <h:inputText  />
+            <h:outputLabel value="Surname" />
+            <h:inputText />
+            <h:outputLabel value="Email" />
+            <h:inputText  />
+            <h:outputLabel value="Password" />
+            <h:inputSecret />
+            <h:outputLabel value="Re-enter Pasword" />
+            <h:inputSecret  />
+            <h:outputLabel value="Select Lucky Number" />
+            <h:inputText />
+            <f:facet name="footer">
+               <h:panelGroup style="display:block; text-align:center">
+                  <h:commandButton id="submit" value="Register" />
+                  <br /><br />
+                  <h:commandButton value="Reset">    
+                        <f:ajax render="@form" />
+                </h:commandButton>
+               </h:panelGroup>
+            </f:facet>
+      </h:panelGrid>
+      
+    </h:form>
+  </h:body>
+</html>
